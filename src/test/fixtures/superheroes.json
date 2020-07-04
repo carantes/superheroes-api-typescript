@@ -1,0 +1,32 @@
+{
+  "Wolverine": {
+    "name": "Wolverine",
+    "fullName": "Logan",
+    "alignment": 0,
+    "intelligence": 63,
+    "power": 89,
+    "ocuppation": "Adventurer, instructor, former bartender, bouncer, spy, government operative, mercenary, soldier, sailor, miner",
+    "imageURL": "https://www.superherodb.com/pictures2/portraits/10/100/161.jpg",
+    "totalRelatives": 7
+  },
+  "Batman": {
+    "name": "Batman",
+    "fullName": "Bruce Wayne",
+    "alignment": 0,
+    "intelligence": 81,
+    "power": 63,
+    "ocuppation": "-",
+    "imageURL": "https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg",
+    "totalRelatives": 8
+  },
+  "Deadpool": {
+    "name": "Deadpool",
+    "fullName": "Wade Wilson",
+    "alignment": 2,
+    "intelligence": 69,
+    "power": 100,
+    "ocuppation": "Mercenary; former enforcer, government operative, sumo wrestler, soldier, assassin, anti-hero, others",
+    "imageURL": "https://www.superherodb.com/pictures2/portraits/10/100/10090.jpg",
+    "totalRelatives": 0
+  }
+}

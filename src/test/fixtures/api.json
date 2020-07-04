@@ -1,0 +1,19 @@
+{
+  "Wolverine": {
+    "name": "Wolverine",
+    "biography": {
+      "fullName": "Logan",
+      "alignment": "good"
+    },
+    "powerstats": {
+      "intelligence": "63",
+      "power": "89"
+    },
+    "work": {
+      "occupation": "Adventurer, instructor, former bartender..."
+    },
+    "image": {
+      "url": ""
+    }
+  }
+}
