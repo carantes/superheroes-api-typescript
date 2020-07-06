@@ -1,6 +1,10 @@
 import dotenv from "dotenv";
 
 const { NODE_ENV } = process.env;
+
+// eslint-disable-next-line no-console
+console.log("Read envs from config on: ", NODE_ENV);
+
 const path = NODE_ENV === "test" ? ".env.test" : ".env";
 const { error, parsed: envs } = dotenv.config({ path });
 
