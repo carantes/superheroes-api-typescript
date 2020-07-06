@@ -43,22 +43,36 @@ The goal here is to keep the project struture very simple, thinking in medium si
 
 1. Requirements
 
-   - Install [NodeJS](https://nodejs.org/en/download/)
-   - Install [Docker](https://www.docker.com/products/docker-desktop)
+   - [NodeJS](https://nodejs.org/en/download/)
+   - [Docker](https://www.docker.com/products/docker-desktop)
+   - [Mongo](https://www.mongodb.com/try/download/community)
 
 2. Configure local environment
 
    - Create a `.env` and `.env.test` files on project root folder (sample configuration below).
 
-3. Run the tests
+3. Install
+
+   ```
+   npm install
+   ```
+
+4. Run the tests
 
    ```
    npm test
    ```
 
-4. Run the app
+5. Run the app
+
    ```
-   make start
+   npm start
+   ```
+
+6. Run the app (Docker)
+
+   ```
+   docker-compose up
    ```
 
 ## Environments
