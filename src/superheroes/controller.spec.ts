@@ -15,6 +15,7 @@ describe("Superheroes Controller", () => {
       getAll: jest.fn().mockReturnValue({ toArray: () => [] }),
       getOne: jest.fn(),
       insertOne: jest.fn(),
+      deleteOne: jest.fn(),
       drop: jest.fn(),
     };
     service = {
@@ -79,6 +80,48 @@ describe("Superheroes Controller", () => {
         await controller.createSuperhero(Wolverine.name);
       } catch (err) {
         expect(err.message).toBe(`Superhero with id ${Wolverine.name} not found`);
+      }
+    });
+  });
+
+  describe("Delete superhero", () => {
+    it("should call deleteOne function on DAO", async () => {
+      const id = "1";
+      dao.deleteOne = jest.fn().mockReturnValue({
+        result: {
+          ok: true,
+        },
+        deletedCount: 1,
+      });
+      await controller.deleteSuperhero(id);
+      expect(dao.deleteOne).toHaveBeenCalledWith({ _id: id });
+    });
+
+    it("should return true if superhero was deleted", async () => {
+      const id = "1";
+      dao.deleteOne = jest.fn().mockReturnValue({
+        result: {
+          ok: true,
+        },
+        deletedCount: 1,
+      });
+
+      expect(await controller.deleteSuperhero(id)).toBe(true);
+    });
+
+    it("should raise an exception if superhero not found", async () => {
+      const id = "1";
+      dao.deleteOne = jest.fn().mockReturnValue({
+        result: {
+          ok: true,
+        },
+        deletedCount: 0,
+      });
+
+      try {
+        await controller.deleteSuperhero(id);
+      } catch (err) {
+        expect(err.message).toBe(`Superhero with id ${id} not found`);
       }
     });
   });

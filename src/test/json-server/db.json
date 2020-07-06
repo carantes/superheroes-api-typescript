@@ -1,0 +1,299 @@
+{
+  "superheroes": [
+    {
+      "id": "Deadpool",
+      "response": "success",
+      "results-for": "Deadpool",
+      "results": [
+        {
+          "id": "213",
+          "name": "Deadpool",
+          "powerstats": {
+            "intelligence": "69",
+            "strength": "32",
+            "speed": "50",
+            "durability": "100",
+            "power": "100",
+            "combat": "100"
+          },
+          "biography": {
+            "full-name": "Wade Wilson",
+            "alter-egos": "Evil Deadpool, Venompool",
+            "aliases": [
+              "Wade Wilson",
+              "Jack",
+              "Chiyonosake (\"the Wolf of the Rice Wine\")",
+              "Rhodes",
+              "Corpus",
+              "Lopez",
+              "Hobgoblin",
+              "Thom Cruz",
+              "Peter Parker"
+            ],
+            "place-of-birth": "Canada",
+            "first-appearance": "New Mutants #98 (February, 1991)",
+            "publisher": "Evil Deadpool",
+            "alignment": "neutral"
+          },
+          "appearance": {
+            "gender": "Male",
+            "race": "Mutant",
+            "height": ["6'2", "188 cm"],
+            "weight": ["210 lb", "95 kg"],
+            "eye-color": "Brown",
+            "hair-color": "No Hair"
+          },
+          "work": {
+            "occupation": "Mercenary; former enforcer, government operative, sumo wrestler, soldier, assassin, anti-hero, others",
+            "base": "Cavern-X, Sedona, Arizona, Mobile"
+          },
+          "connections": {
+            "group-affiliation": "Thunderbolts (Strike Team), shares body with Agent Preston; formerly X-Force, Deadpool Corps, Agency X, S.H.I.E.L.D.; Code Red, Six Pack, One World Church, DP Inc., Weapon X, Weapon Plus, Heroes for Hire, Secret Defenders, Frightful Four, Team Deadpool, L",
+            "relatives": "Thomas \"Mickey\" Wilson (father, deceased); Hailey Wilson (mother, deceased); Gretchen Wilson, Orksa (ex-wives); Evil Deadpool (clone); Widdle Wade (clone)"
+          },
+          "image": {
+            "url": "https://www.superherodb.com/pictures2/portraits/10/100/835.jpg"
+          }
+        },
+        {
+          "id": "247",
+          "name": "Evil Deadpool",
+          "powerstats": {
+            "intelligence": "69",
+            "strength": "32",
+            "speed": "50",
+            "durability": "100",
+            "power": "100",
+            "combat": "100"
+          },
+          "biography": {
+            "full-name": "Wade Wilson",
+            "alter-egos": "Deadpool, Venompool",
+            "aliases": ["Dreadpool"],
+            "place-of-birth": "-",
+            "first-appearance": "Deadpool Vol 2 #44 (December, 2011)",
+            "publisher": "Deadpool",
+            "alignment": "bad"
+          },
+          "appearance": {
+            "gender": "Male",
+            "race": "Mutant",
+            "height": ["6'2", "188 cm"],
+            "weight": ["210 lb", "95 kg"],
+            "eye-color": "White",
+            "hair-color": "Red"
+          },
+          "work": {
+            "occupation": "Mercenary, Assasin",
+            "base": "-"
+          },
+          "connections": {
+            "group-affiliation": "Evil Deadpool Corps",
+            "relatives": "-"
+          },
+          "image": {
+            "url": "https://www.superherodb.com/pictures2/portraits/10/100/10090.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "Wolverine",
+      "response": "success",
+      "results-for": "Wolverine",
+      "results": [
+        {
+          "id": "717",
+          "name": "Wolverine",
+          "powerstats": {
+            "intelligence": "63",
+            "strength": "32",
+            "speed": "50",
+            "durability": "100",
+            "power": "89",
+            "combat": "100"
+          },
+          "biography": {
+            "full-name": "Logan",
+            "alter-egos": "No alter egos found.",
+            "aliases": [
+              "Weapon X",
+              "Weapon Ten",
+              "Death",
+              "Mutate 9601",
+              "Jim Logan",
+              "Emilio Garra",
+              "Weapon Chi",
+              "Experiment X",
+              "Agent Ten",
+              "Peter Richards",
+              "Mai kethLogan",
+              "Mr. Patch"
+            ],
+            "place-of-birth": "Alberta, Canada",
+            "first-appearance": "Incredible Hulk Vol. 2 #180",
+            "publisher": "Marvel Comics",
+            "alignment": "good"
+          },
+          "appearance": {
+            "gender": "Male",
+            "race": "Mutant",
+            "height": ["5'3", "160 cm"],
+            "weight": ["300 lb", "135 kg"],
+            "eye-color": "Blue",
+            "hair-color": "Black"
+          },
+          "work": {
+            "occupation": "Adventurer, instructor, former bartender, bouncer, spy, government operative, mercenary, soldier, sailor, miner",
+            "base": "Xavier Institute, Salem Center, Westchester County, New York; Avengers Tower, New York City"
+          },
+          "connections": {
+            "group-affiliation": "X-Men, formerly Horsemen of Apocalypse, Fantastic Four, Secret Defenders, Clan Yashida, Department H, Alpha Flight, Department K, Team X, Team_Weapon_X, Devil's Brigade, Canadian Army",
+            "relatives": "John Howlett Sr. (father, deceased), Elizabeth Howlett (mother, deceased), John Howlett Jr. (brother, allegedly deceased), Viper (ex-wife), Amiko (foster daughter), Erista (son), X-23 (clone)"
+          },
+          "image": {
+            "url": "https://www.superherodb.com/pictures2/portraits/10/100/161.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "Batman",
+      "response": "success",
+      "results-for": "Batman",
+      "results": [
+        {
+          "id": "69",
+          "name": "Batman",
+          "powerstats": {
+            "intelligence": "81",
+            "strength": "40",
+            "speed": "29",
+            "durability": "55",
+            "power": "63",
+            "combat": "90"
+          },
+          "biography": {
+            "full-name": "Terry McGinnis",
+            "alter-egos": "No alter egos found.",
+            "aliases": [
+              "Batman II",
+              "The Tomorrow Knight",
+              "The second Dark Knight",
+              "The Dark Knight of Tomorrow",
+              "Batman Beyond"
+            ],
+            "place-of-birth": "Gotham City, 25th Century",
+            "first-appearance": "Batman Beyond #1",
+            "publisher": "DC Comics",
+            "alignment": "good"
+          },
+          "appearance": {
+            "gender": "Male",
+            "race": "Human",
+            "height": ["5'10", "178 cm"],
+            "weight": ["170 lb", "77 kg"],
+            "eye-color": "Blue",
+            "hair-color": "Black"
+          },
+          "work": {
+            "occupation": "-",
+            "base": "21st Century Gotham City"
+          },
+          "connections": {
+            "group-affiliation": "Batman Family, Justice League Unlimited",
+            "relatives": "Bruce Wayne (biological father), Warren McGinnis (father, deceased), Mary McGinnis (mother), Matt McGinnis (brother)"
+          },
+          "image": {
+            "url": "https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg"
+          }
+        },
+        {
+          "id": "70",
+          "name": "Batman",
+          "powerstats": {
+            "intelligence": "100",
+            "strength": "26",
+            "speed": "27",
+            "durability": "50",
+            "power": "47",
+            "combat": "100"
+          },
+          "biography": {
+            "full-name": "Bruce Wayne",
+            "alter-egos": "No alter egos found.",
+            "aliases": ["Insider", "Matches Malone"],
+            "place-of-birth": "Crest Hill, Bristol Township; Gotham County",
+            "first-appearance": "Detective Comics #27",
+            "publisher": "DC Comics",
+            "alignment": "good"
+          },
+          "appearance": {
+            "gender": "Male",
+            "race": "Human",
+            "height": ["6'2", "188 cm"],
+            "weight": ["210 lb", "95 kg"],
+            "eye-color": "blue",
+            "hair-color": "black"
+          },
+          "work": {
+            "occupation": "Businessman",
+            "base": "Batcave, Stately Wayne Manor, Gotham City; Hall of Justice, Justice League Watchtower"
+          },
+          "connections": {
+            "group-affiliation": "Batman Family, Batman Incorporated, Justice League, Outsiders, Wayne Enterprises, Club of Heroes, formerly White Lantern Corps, Sinestro Corps",
+            "relatives": "Damian Wayne (son), Dick Grayson (adopted son), Tim Drake (adopted son), Jason Todd (adopted son), Cassandra Cain (adopted ward)\nMartha Wayne (mother, deceased), Thomas Wayne (father, deceased), Alfred Pennyworth (former guardian), Roderick Kane (grandfather, deceased), Elizabeth Kane (grandmother, deceased), Nathan Kane (uncle, deceased), Simon Hurt (ancestor), Wayne Family"
+          },
+          "image": {
+            "url": "https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"
+          }
+        },
+        {
+          "id": "71",
+          "name": "Batman II",
+          "powerstats": {
+            "intelligence": "88",
+            "strength": "11",
+            "speed": "33",
+            "durability": "28",
+            "power": "36",
+            "combat": "100"
+          },
+          "biography": {
+            "full-name": "Dick Grayson",
+            "alter-egos": "Nightwing, Robin",
+            "aliases": ["Dick Grayson"],
+            "place-of-birth": "-",
+            "first-appearance": "-",
+            "publisher": "Nightwing",
+            "alignment": "good"
+          },
+          "appearance": {
+            "gender": "Male",
+            "race": "Human",
+            "height": ["5'10", "178 cm"],
+            "weight": ["175 lb", "79 kg"],
+            "eye-color": "Blue",
+            "hair-color": "Black"
+          },
+          "work": {
+            "occupation": "-",
+            "base": "Gotham City; formerly Bludhaven, New York City"
+          },
+          "connections": {
+            "group-affiliation": "Justice League Of America, Batman Family",
+            "relatives": "John Grayson (father, deceased), Mary Grayson (mother, deceased), Bruce Wayne / Batman (adoptive father), Damian Wayne / Robin (foster brother), Jason Todd / Red Hood (adoptive brother), Tim Drake / Red Robin (adoptive brother), Cassandra Cain / Batgirl IV (adoptive sister)"
+          },
+          "image": {
+            "url": "https://www.superherodb.com/pictures2/portraits/10/100/1496.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "NotFound",
+      "response": "error",
+      "error": "character with given name not found"
+    }
+  ]
+}

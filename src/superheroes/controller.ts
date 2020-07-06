@@ -12,6 +12,7 @@ export interface SuperheroesControllerInterface {
   getAllSuperheroes: () => Promise<Superhero[]>;
   getSuperhero: (id: string) => Promise<Superhero>;
   createSuperhero: (name: string) => Promise<Superhero | null>;
+  deleteSuperhero: (id: string) => Promise<boolean>;
 }
 
 export class SuperheroesController implements SuperheroesControllerInterface {
@@ -65,5 +66,15 @@ export class SuperheroesController implements SuperheroesControllerInterface {
     //Insert on db
 
     return sh;
+  };
+
+  deleteSuperhero = async (id: string): Promise<boolean> => {
+    const result = await this.dao.deleteOne({ _id: id });
+
+    if (result.result.ok && result.deletedCount === 0) {
+      throw new SuperheroNotFoundException(id);
+    }
+
+    return true;
   };
 }

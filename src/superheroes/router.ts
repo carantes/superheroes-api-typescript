@@ -7,6 +7,7 @@ interface SuperheroesRouterInterface {
   getSuperheroHandler: RequestHandler;
   getAllSuperheroesHandler: RequestHandler;
   createSuperheroHandler: RequestHandler;
+  deleteSuperheroHandler: RequestHandler;
 }
 
 export class SuperheroesRouter implements SuperheroesRouterInterface {
@@ -17,6 +18,7 @@ export class SuperheroesRouter implements SuperheroesRouterInterface {
     this.router.get("/:id", this.getSuperheroHandler);
     this.router.get("/", this.getAllSuperheroesHandler);
     this.router.post("/", this.createSuperheroHandler);
+    this.router.delete("/:id", this.deleteSuperheroHandler);
   }
 
   get router(): Router {
@@ -39,14 +41,9 @@ export class SuperheroesRouter implements SuperheroesRouterInterface {
   getAllSuperheroesHandler = async (
     req: Request,
     res: Response,
-    next: NextFunction,
   ): Promise<Response | void> => {
-    try {
-      const result = await this.controller.getAllSuperheroes();
-      return res.status(200).json(result);
-    } catch (e) {
-      return next(e);
-    }
+    const result = await this.controller.getAllSuperheroes();
+    return res.status(200).json(result);
   };
 
   createSuperheroHandler = async (
@@ -57,6 +54,19 @@ export class SuperheroesRouter implements SuperheroesRouterInterface {
     try {
       const sh = await this.controller.createSuperhero(req.body.name);
       return res.status(201).json(sh);
+    } catch (e) {
+      return next(e);
+    }
+  };
+
+  deleteSuperheroHandler = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ): Promise<Response | void> => {
+    try {
+      await this.controller.deleteSuperhero(req.params.id);
+      return res.status(200).json();
     } catch (e) {
       return next(e);
     }

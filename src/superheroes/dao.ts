@@ -1,10 +1,17 @@
-import { Db, Cursor, FilterQuery, InsertOneWriteOpResult } from "mongodb";
+import {
+  Db,
+  Cursor,
+  FilterQuery,
+  InsertOneWriteOpResult,
+  DeleteWriteOpResultObject,
+} from "mongodb";
 import { Superhero } from "./model";
 
 export interface DAOInterface<T> {
   getAll: (filter?: FilterQuery<T>) => Cursor<T>;
   getOne: (filter: FilterQuery<Superhero>) => Promise<T | null>;
   insertOne: (object: T) => Promise<InsertOneWriteOpResult<Superhero>>;
+  deleteOne: (filter: FilterQuery<Superhero>) => Promise<DeleteWriteOpResultObject>;
   drop: () => Promise<any>;
 }
 
@@ -21,6 +28,10 @@ export class SuperheroesDAO implements DAOInterface<Superhero> {
 
   insertOne = (sh: Superhero): Promise<InsertOneWriteOpResult<Superhero>> => {
     return this.db.collection("superheroes").insertOne(sh);
+  };
+
+  deleteOne = (filter: FilterQuery<Superhero>): Promise<DeleteWriteOpResultObject> => {
+    return this.db.collection("superheroes").deleteOne(filter);
   };
 
   drop = async (): Promise<any> => {

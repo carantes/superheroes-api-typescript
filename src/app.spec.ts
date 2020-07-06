@@ -41,48 +41,68 @@ describe("Superheroes", () => {
     client.close();
   });
 
-  it("should get all superheroes", async () => {
-    const res = await request(app).get("/superheroes").expect(200);
-    expect(Array.isArray(res.body)).toBeTruthy();
-    expect(res.body[0]).toEqual(sh1);
-    expect(res.body[1]).toEqual(sh2);
+  describe("Get superheroes", () => {
+    it("should get all superheroes", async () => {
+      const res = await request(app).get("/superheroes").expect(200);
+      expect(Array.isArray(res.body)).toBeTruthy();
+      expect(res.body[0]).toEqual(sh1);
+      expect(res.body[1]).toEqual(sh2);
+    });
+
+    it("should get one superhero by id", async () => {
+      const res = await request(app).get(`/superheroes/${sh1._id}`).expect(200);
+      expect(res.body).toEqual(sh1);
+    });
+
+    it("should return 404 not found if get an unknown superhero", async () => {
+      const res = await request(app).get("/superheroes/1").expect(404);
+      expect(res.text).toEqual("Superhero with id 1 not found");
+    });
   });
 
-  it("should get one superhero by id", async () => {
-    const res = await request(app).get(`/superheroes/${sh1._id}`).expect(200);
-    expect(res.body).toEqual(sh1);
+  describe("Create superhero", () => {
+    it("should return an error if already exists", async () => {
+      const res = await request(app)
+        .post("/superheroes")
+        .set("Accept", "application/json")
+        .send({ name: sh1.name })
+        .expect(409);
+
+      expect(res.text).toEqual(`Superhero with name ${sh1.name} already exists`);
+    });
+
+    it("should create a superhero if not found on database", async () => {
+      const { name } = Deadpool;
+      const res = await request(app)
+        .post("/superheroes")
+        .set("Accept", "application/json")
+        .send({ name })
+        .expect(201);
+
+      expect(res.body.name).toEqual(name);
+    });
+
+    it("should return 404 if not found on service", async () => {
+      const name = "NotFound";
+      const res = await request(app)
+        .post("/superheroes")
+        .set("Accept", "application/json")
+        .send({ name })
+        .expect(404);
+
+      expect(res.text).toEqual(`Superhero with id ${name} not found`);
+    });
   });
 
-  it("should return 404 not found if get an unknown superhero", async () => {
-    const res = await request(app).get("/superheroes/1").expect(404);
-    expect(res.text).toEqual("Superhero with id 1 not found");
+  describe("Delete superhero", () => {
+    it("should delete a superhero if found on database", async () => {
+      const res = await request(app).delete(`/superheroes/${sh1._id}`).expect(200);
+      expect(res.text).toEqual("");
+    });
+
+    it("should return 404 not found if try to delete an unknown superhero", async () => {
+      const res = await request(app).delete("/superheroes/1").expect(404);
+      expect(res.text).toEqual("Superhero with id 1 not found");
+    });
   });
-
-  it("should return an error on create if superhero already exists", async () => {
-    const res = await request(app)
-      .post("/superheroes")
-      .set("Accept", "application/json")
-      .send({ name: sh1.name })
-      .expect(409);
-
-    expect(res.text).toEqual(`Superhero with name ${sh1.name} already exists`);
-  });
-
-  it("should create a superhero if not found on database", async () => {
-    const { name } = Deadpool;
-    const res = await request(app)
-      .post("/superheroes")
-      .set("Accept", "application/json")
-      .send({ name })
-      .expect(201);
-
-    expect(res.body.name).toEqual(name);
-  });
-
-  // TODO
-  // MOCK SERVICE
-  // Create superhero - not found on service
-  // Delete superhero
-  // Readme
-  // Docker
 });

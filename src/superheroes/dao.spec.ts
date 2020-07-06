@@ -39,4 +39,9 @@ describe("Superheroes DAO", () => {
     const result = await dao.getOne({ name: sh1.name });
     expect(result).toEqual(sh1);
   });
+
+  it("should delete one superhero by id", async () => {
+    const result = await dao.deleteOne({ _id: sh1._id });
+    expect(result.deletedCount).toEqual(1);
+  });
 });
