@@ -17,8 +17,8 @@ jobs:
           npm run build
       - uses: actions/upload-artifact@master
         with:
-          name: webpack artifacts
-          path: public/
+          name: typescript artifacts
+          path: dist/
 
   test:
     needs: build
@@ -32,8 +32,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@master
         with:
-          name: webpack artifacts
-          path: public
+          name: typescript artifacts
+          path: dist/
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
