@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import moment from "moment";
 
 export enum SuperheroAlignment {
   GOOD,
@@ -6,9 +7,19 @@ export enum SuperheroAlignment {
   NEUTRAL,
 }
 
-export class Superhero {
+class BaseModel {
   public _id: any;
+  public createdAt: string;
+  public updatedAt: string;
 
+  constructor() {
+    this._id = uuidv4();
+    this.createdAt = moment().format();
+    this.updatedAt = moment().format();
+  }
+}
+
+export class Superhero extends BaseModel {
   constructor(
     readonly name: string,
     readonly fullName: string,
@@ -19,7 +30,7 @@ export class Superhero {
     readonly imageURL: string,
     readonly totalRelatives: number,
   ) {
-    this._id = uuidv4();
+    super();
   }
 
   static fromObject(object: any): Superhero {

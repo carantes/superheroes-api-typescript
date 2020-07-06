@@ -66,7 +66,7 @@ export class SuperheroesRouter implements SuperheroesRouterInterface {
   ): Promise<Response | void> => {
     try {
       await this.controller.deleteSuperhero(req.params.id);
-      return res.status(200).json();
+      return res.status(204).json();
     } catch (e) {
       return next(e);
     }

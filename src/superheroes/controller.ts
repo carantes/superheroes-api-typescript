@@ -63,7 +63,7 @@ export class SuperheroesController implements SuperheroesControllerInterface {
       0,
     );
 
-    //Insert on db
+    await this.dao.insertOne(sh);
 
     return sh;
   };

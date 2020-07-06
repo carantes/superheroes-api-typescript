@@ -96,7 +96,7 @@ describe("Superheroes", () => {
 
   describe("Delete superhero", () => {
     it("should delete a superhero if found on database", async () => {
-      const res = await request(app).delete(`/superheroes/${sh1._id}`).expect(200);
+      const res = await request(app).delete(`/superheroes/${sh1._id}`).expect(204);
       expect(res.text).toEqual("");
     });
 
