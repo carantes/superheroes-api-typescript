@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf ./dist && tsc",
+    "ts-node": "NODE_ENV=development ts-node ./src/index.ts",
     "start:dev": "nodemon",
     "start": "npm run build && node dist/index.js",
     "lint": "eslint . --ext .ts",
