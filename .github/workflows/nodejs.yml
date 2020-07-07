@@ -47,9 +47,9 @@ jobs:
       - name: npm install and test
         run: |
           npm install
-          # npm test
+          npm test
         env:
           CI: true
           MONGO_DBNAME: superheroes-test
           SERVER_PORT: 3001
-          API_ENDPOINT: http://localhost:3004
+          API_ENDPOINT: https://www.superheroapi.com/api.php/${{ secrets.API_KEY }}
