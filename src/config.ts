@@ -9,7 +9,7 @@ const path = NODE_ENV === "test" ? ".env.test" : ".env";
 const { error, parsed: envs } = dotenv.config({ path });
 
 if (error) {
-  throw error;
+  console.error(error);
 }
 
 // eslint-disable-next-line no-console
