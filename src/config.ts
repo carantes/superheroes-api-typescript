@@ -8,10 +8,6 @@ console.log("Read envs from config on: ", NODE_ENV);
 const path = NODE_ENV === "test" ? ".env.test" : ".env";
 const { error, parsed: envs } = dotenv.config({ path });
 
-if (error) {
-  console.error(error);
-}
-
 // eslint-disable-next-line no-console
 console.log(envs);
 
