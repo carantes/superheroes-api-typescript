@@ -2,6 +2,8 @@
 
 Typescript app to manage superheroes data using the [Superhero API](https://superheroapi.com/).
 
+![Node.js CI](https://github.com/carantes/superheroes-api-typescript/workflows/Node.js%20CI/badge.svg)
+
 ## Overview
 
 ![System design](/superheroes_ts.png)
