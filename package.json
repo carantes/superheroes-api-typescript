@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .ts",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "prettier-watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest --forceExit",
     "test:watch": "npm run test -- --watchAll --coverage",
     "json-server": "json-server --port 3004 --watch src/test/json-server/db.json --routes src/test/json-server/routes.json"
   },
